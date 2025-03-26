@@ -1,15 +1,17 @@
 name: flutter_dapp_provider
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "A web3 dapp provider for flutter."
+version: 0.0.2
+homepage: https://github.com/webeautiful/flutter_dapp_provider
 
 environment:
-  sdk: ^3.5.4
-  flutter: ">=1.17.0"
+  sdk: ^3.2.0
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  flutter_inappwebview: ^6.0.0
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:
@@ -23,8 +25,8 @@ dev_dependencies:
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - packages/flutter_injected_web3/assets/provider.min.js
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
