@@ -27,9 +27,9 @@ class InjectedWebview extends StatefulWidget {
   bool initialized = false;
   String? currentURL;
   InjectedWebview({
+    super.key,
     required this.chainId,
     required this.rpc,
-    Key? key,
     this.windowId,
     this.initialUrlRequest,
     this.initialFile,
@@ -388,7 +388,7 @@ class _InjectedWebviewState extends State<InjectedWebview> {
               consoleMessage,
             ) {
               if (widget.isDebug) {
-                print("Console Message: ${consoleMessage.message}");
+                // print("Console Message: ${consoleMessage.message}");
               }
               widget.onConsoleMessage?.call(
                 controller,
@@ -805,10 +805,10 @@ class _InjectedWebviewState extends State<InjectedWebview> {
         .onError((error, stackTrace) => debugPrint(error.toString()));
   }
 
-  Future<void> _sendResults(InAppWebViewController controller, String network,
-      List<String> messages, int methodId) {
-    String message = messages.join(",");
-    String script = "window.$network.sendResponse($methodId, \"$message\")";
-    return controller.evaluateJavascript(source: script);
-  }
+  // Future<void> _sendResults(InAppWebViewController controller, String network,
+  //     List<String> messages, int methodId) {
+  //   String message = messages.join(",");
+  //   String script = "window.$network.sendResponse($methodId, \"$message\")";
+  //   return controller.evaluateJavascript(source: script);
+  // }
 }

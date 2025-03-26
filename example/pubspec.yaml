@@ -9,6 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_dapp_provider:
+    path: ../
+  flutter_inappwebview: ^6.0.0
+  http: ^1.2.2
+  web3dart: ^2.7.3
 
 dev_dependencies:
   flutter_test:
