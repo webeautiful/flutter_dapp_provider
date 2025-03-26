@@ -26,7 +26,7 @@ flutter:
 
   # To add assets to your package, add an assets section, like this:
   assets:
-    - packages/flutter_injected_web3/assets/provider.min.js
+    - packages/flutter_dapp_provider/assets/provider.min.js
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see

@@ -327,7 +327,7 @@ class _InjectedWebviewState extends State<InjectedWebview> {
   ///Load provider initial web3 to inject web app
   Future<void> _loadWeb3() async {
     String? web3;
-    String path = "packages/flutter_injected_web3/assets/provider.min.js";
+    String path = "packages/flutter_dapp_provider/assets/provider.min.js";
     web3 = await DefaultAssetBundle.of(context).loadString(path);
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -458,7 +458,7 @@ class _InjectedWebviewState extends State<InjectedWebview> {
     if (Platform.isAndroid) {
       await controller.injectJavascriptFileFromAsset(
           assetFilePath:
-              "packages/flutter_injected_web3/assets/provider.min.js");
+              "packages/flutter_dapp_provider/assets/provider.min.js");
       String initJs = reInit
           ? _loadReInt(widget.chainId, widget.rpc, address)
           : _loadInitJs(widget.chainId, widget.rpc);
